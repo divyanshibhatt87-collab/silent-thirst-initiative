@@ -268,6 +268,16 @@ p {
   box-shadow: 0 0 0 1px rgba(255, 94, 94, 0.08), 0 0 24px rgba(255, 62, 62, 0.12);
 }
 
+.danger-alert-strong {
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(255, 48, 48, 0.24), rgba(255, 48, 48, 0.08));
+  box-shadow:
+    0 0 0 1px rgba(255, 94, 94, 0.12),
+    0 0 32px rgba(255, 48, 48, 0.2),
+    inset 0 0 24px rgba(255, 48, 48, 0.06);
+}
+
 .danger-dot {
   width: 14px;
   height: 14px;
@@ -571,6 +581,71 @@ p {
 
 .compare-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.population-math {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.math-card,
+.concern-card {
+  background: var(--surface-strong);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+
+.math-steps {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.math-line {
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(9, 22, 39, 0.92);
+  border: 1px solid rgba(18, 215, 255, 0.14);
+  color: #dff9ff;
+  font-size: 1.08rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.concern-copy {
+  margin-top: 16px;
+}
+
+.impact-note {
+  margin-top: 18px;
+}
+
+.impact-note strong {
+  color: #dff9ff;
+}
+
+.impact-buttons {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.impact-button {
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(18, 215, 255, 0.16), rgba(91, 140, 255, 0.16));
+  border: 1px solid rgba(18, 215, 255, 0.28);
+  color: #f2fcff;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.2);
+}
+
+.campaign-copy {
+  margin-top: 18px;
+  font-size: 1.05rem;
 }
 
 .visual-card,
@@ -1158,6 +1233,7 @@ textarea:focus {
   .solutions-layout,
   .connect-layout,
   .simulation-layout,
+  .population-math,
   .sim-pipeline,
   .sim-metrics,
   .visual-explainer-grid,
