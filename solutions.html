@@ -32,6 +32,18 @@
     </header>
 
     <main>
+      <section class="section solution-launchpad">
+        <div class="popup-banner">
+          <div>
+            <p class="eyebrow">Interactive entry</p>
+            <h2>Now you know the problem. Let's look at the solutions.</h2>
+            <p>This guided reveal opens the practical side of the story: what can be redesigned, where communities benefit, and why infrastructure choices matter.</p>
+          </div>
+          <button class="button button-primary button-spotlight" id="showSolutionsBtn" type="button">Show the solutions</button>
+        </div>
+      </section>
+
+      <div id="solutionsReveal" class="solutions-reveal is-locked">
       <section class="section">
         <div class="section-heading">
           <p class="eyebrow">Technical approaches</p>
@@ -58,6 +70,48 @@
       </section>
 
       <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">How they work</p>
+          <h2>See each solution as a process, not just a slogan.</h2>
+        </div>
+        <div class="solution-journey-grid">
+          <article class="journey-card">
+            <h3>Reclaimed water</h3>
+            <div class="journey-flow">
+              <span class="journey-pill">Treated wastewater</span>
+              <span class="journey-arrow">></span>
+              <span class="journey-pill">Cooling system</span>
+              <span class="journey-arrow">></span>
+              <span class="journey-pill">Less pressure on drinking water</span>
+            </div>
+            <p>Instead of drawing fresh potable water first, facilities can use treated reclaimed water for cooling where infrastructure allows it.</p>
+          </article>
+          <article class="journey-card">
+            <h3>Smarter siting</h3>
+            <div class="journey-flow">
+              <span class="journey-pill">Cooler climate</span>
+              <span class="journey-arrow">></span>
+              <span class="journey-pill">Lower cooling burden</span>
+              <span class="journey-arrow">></span>
+              <span class="journey-pill">Less evaporation risk</span>
+            </div>
+            <p>Location shapes water demand before a server is even switched on. Cooler and less-stressed regions reduce the system burden from day one.</p>
+          </article>
+          <article class="journey-card">
+            <h3>Waste heat reuse</h3>
+            <div class="journey-flow">
+              <span class="journey-pill">Server heat</span>
+              <span class="journey-arrow">></span>
+              <span class="journey-pill">Capture loop</span>
+              <span class="journey-arrow">></span>
+              <span class="journey-pill">Homes, greenhouses, industry</span>
+            </div>
+            <p>Instead of throwing away excess heat, a capture system redirects it into nearby uses so the facility returns local value instead of only consuming resources.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
         <div class="section-heading narrow">
           <p class="eyebrow">Operational approaches</p>
           <h2>Infrastructure decisions outside the server rack matter too.</h2>
@@ -66,20 +120,56 @@
           <article class="fact-card">
             <span class="fact-number">01</span>
             <h3>Use reclaimed water</h3>
-            <p>Cooling systems do not always need potable water. Recycled and reclaimed water can reduce pressure on drinking water supplies.</p>
+            <p>Cooling systems do not always need potable water. Recycled and reclaimed water from treated wastewater streams can reduce pressure on drinking water supplies, especially in regions where communities are already competing for limited freshwater. This shifts the question from "how much water is used?" to "what kind of water is being used, and who needs it most?"</p>
           </article>
           <article class="fact-card">
             <span class="fact-number">02</span>
             <h3>Choose sites carefully</h3>
-            <p>Cooler climates and less stressed watersheds can reduce the burden of water-intensive thermal management.</p>
+            <p>Cooler climates and less stressed watersheds can reduce the burden of water-intensive thermal management. Where a data center is built affects how hard cooling systems have to work, how much water may evaporate, and whether the facility adds strain to an already vulnerable local ecosystem. Siting is not just a business decision. It is a water justice decision.</p>
           </article>
           <article class="fact-card">
             <span class="fact-number">03</span>
             <h3>Reuse waste heat</h3>
-            <p>Heat from data centers can support district heating and other community systems instead of simply being discarded.</p>
+            <p>Data centers produce enormous amounts of heat, and too often that heat is simply expelled into the air as a byproduct. Waste heat reuse treats that heat as a resource instead of a loss. In some places, captured data center heat can be redirected into district heating networks, nearby buildings, greenhouses, or industrial processes. This does not eliminate the water footprint on its own, but it improves the overall efficiency of the system and helps communities see data centers as infrastructure that should return value locally, not just extract resources quietly.</p>
           </article>
         </div>
       </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Visual comparison</p>
+          <h2>Old model versus better model</h2>
+        </div>
+        <div class="compare-grid">
+          <article class="compare-card before">
+            <p class="response-label">Conventional pattern</p>
+            <h3>Heat is dumped. Water is drained. Communities see little return.</h3>
+            <div class="stack-illustration">
+              <span class="stack-block hot"></span>
+              <span class="stack-arrow">^</span>
+              <span class="stack-cloud"></span>
+            </div>
+          </article>
+          <article class="compare-card after">
+            <p class="response-label">Improved pattern</p>
+            <h3>Water sources improve, cooling is smarter, and heat can be reused nearby.</h3>
+            <div class="stack-illustration">
+              <span class="stack-block cool"></span>
+              <span class="stack-arrow">&gt;</span>
+              <span class="stack-home"></span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Waste heat visual</p>
+          <h2>See how heat can move from the server hall into nearby use.</h2>
+        </div>
+        <img class="section-image" src="images/solutions-heat-reuse.svg" alt="Illustration showing server heat being captured and redirected to nearby homes">
+      </section>
+      </div>
     </main>
 
     <footer class="site-footer">

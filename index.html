@@ -37,15 +37,20 @@
       <div class="hero-grid">
         <section class="hero-copy">
           <p class="eyebrow">Water justice, AI, and public awareness</p>
-          <h1>The servers behind AI are consuming more than electricity.</h1>
+          <h1>The servers behind AI are consuming <span class="text-gradient">more than electricity.</span></h1>
           <p class="lead">
             The Silent Thirst Initiative translates technical research into public
             understanding, showing how AI growth, data center cooling, and water
             scarcity now intersect in ways communities can no longer ignore.
           </p>
+          <div class="hero-ribbons">
+            <span class="hero-ribbon">Hidden water footprint</span>
+            <span class="hero-ribbon">Public awareness campaign</span>
+            <span class="hero-ribbon">Interactive explainers</span>
+          </div>
           <div class="hero-actions">
-            <a class="button button-primary" href="research.html">Explore the research</a>
-            <a class="button button-secondary" href="connect.html">Reach the team</a>
+            <a class="button button-primary button-spotlight" href="research.html">Explore the research</a>
+            <a class="button button-secondary" href="simulation.html">See the water simulation</a>
           </div>
         </section>
 
@@ -61,8 +66,12 @@
             <p class="stat-label">Projected AI water withdrawal by 2027</p>
             <p class="stat-value">4.2-6.6B m^3</p>
             <p class="stat-copy">
-              according to the research materials provided in this workspace.
+              used here as a public awareness estimate to show the scale of the issue.
             </p>
+          </div>
+          <div class="hero-visual-card">
+            <p class="stat-label">What the public rarely sees</p>
+            <img class="hero-image" src="images/data-center-water.svg" alt="Illustration of server heat, cooling water, and vapor leaving a data center">
           </div>
         </aside>
       </div>
@@ -79,11 +88,10 @@
           <article class="story-card">
             <h3>Why this matters now</h3>
             <p>
-              Your source material frames 2026 as a turning point, citing the
-              UN University warning that the world has entered an era of
-              "global water bankruptcy." That means over-withdrawal is no longer
-              just a short-term crisis in some places. It is becoming a
-              structural condition.
+              Water scarcity is no longer a distant environmental concern. As
+              AI infrastructure expands, the pressure on freshwater systems is
+              becoming a public issue that communities, policymakers, and
+              technology companies all need to confront directly.
             </p>
           </article>
           <article class="story-card">
@@ -128,6 +136,29 @@
               <p>Local freshwater systems face added strain, especially in hotter or already water-stressed regions.</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Make it tangible</p>
+          <h2>Tap a lens to translate the issue into something easier to picture.</h2>
+        </div>
+        <div class="awareness-switcher">
+          <div class="switcher-buttons">
+            <button class="switcher-button active" data-awareness="session" type="button">AI session</button>
+            <button class="switcher-button" data-awareness="infrastructure" type="button">Infrastructure</button>
+            <button class="switcher-button" data-awareness="community" type="button">Community impact</button>
+          </div>
+          <article class="awareness-panel">
+            <p class="response-label" id="awarenessTag">Everyday action</p>
+            <h3 id="awarenessTitle">A simple chat can still have a physical water trace.</h3>
+            <p id="awarenessCopy">
+              A prompt may feel weightless, but behind the screen are hot processors,
+              cooling systems, and real water demand. Public awareness begins when
+              digital convenience is linked back to physical infrastructure.
+            </p>
+          </article>
         </div>
       </section>
 
@@ -194,7 +225,7 @@
           <article class="feature-card">
             <p class="fact-number">04</p>
             <h3>Community and connect</h3>
-            <p>Project updates, participation pathways, and the interface to your team.</p>
+            <p>Project updates, participation pathways, and the interface to the initiative team.</p>
             <a class="text-link" href="community.html">Open community page</a>
           </article>
         </div>
@@ -239,7 +270,7 @@
             <h3>Project updates</h3>
             <p>
               Use this section to publish milestones, field notes, interviews,
-              or campaign progress as your passion project grows.
+              or campaign progress as the initiative grows.
             </p>
             <div class="updates-list" id="updatesList">
               <article class="update-item active">
@@ -271,11 +302,19 @@
             </div>
             <p>
               The front end below is set up as the public contact layer between
-              your audience and your team. It can later connect to email, Notion,
+              the audience and the initiative team. It can later connect to email, Notion,
               Airtable, Forms, or a custom backend.
             </p>
           </article>
         </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Campaign visual</p>
+          <h2>Make the issue visible enough to be remembered.</h2>
+        </div>
+        <img class="section-image" src="images/campaign-awareness.svg" alt="Campaign poster illustration about AI and water awareness">
       </section>
 
       <section class="section section-connect" id="connect">

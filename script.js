@@ -23,6 +23,30 @@ const submissionFeed = document.getElementById("submissionFeed");
 const demandRange = document.getElementById("demandRange");
 const heatRange = document.getElementById("heatRange");
 const coolingSelect = document.getElementById("coolingSelect");
+const showSolutionsBtn = document.getElementById("showSolutionsBtn");
+const solutionsReveal = document.getElementById("solutionsReveal");
+const awarenessButtons = document.querySelectorAll(".switcher-button");
+
+const awarenessContent = {
+  session: {
+    tag: "Everyday action",
+    title: "A simple chat can still have a physical water trace.",
+    copy:
+      "A prompt may feel weightless, but behind the screen are hot processors, cooling systems, and real water demand. Public awareness begins when digital convenience is linked back to physical infrastructure.",
+  },
+  infrastructure: {
+    tag: "Infrastructure view",
+    title: "A bigger AI buildout means a bigger cooling problem.",
+    copy:
+      "As more AI servers are installed, more heat has to be removed from the building. That is where water, evaporation, liquid cooling, and hidden resource tradeoffs enter the story.",
+  },
+  community: {
+    tag: "Public impact",
+    title: "Communities live with the water pressure even if they never use the tools.",
+    copy:
+      "The benefits of AI may feel global, but the water burden is often local. A public-facing campaign helps people ask who gains, who pays, and what better design should look like.",
+  },
+};
 
 if (contactForm && responseText) {
   contactForm.addEventListener("submit", async (event) => {
@@ -186,3 +210,29 @@ function updateSimulation() {
 });
 
 updateSimulation();
+
+if (showSolutionsBtn && solutionsReveal) {
+  showSolutionsBtn.addEventListener("click", () => {
+    solutionsReveal.classList.remove("is-locked");
+    solutionsReveal.classList.add("is-open");
+    showSolutionsBtn.textContent = "Solutions unlocked";
+    showSolutionsBtn.disabled = true;
+    solutionsReveal.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+}
+
+if (awarenessButtons.length > 0) {
+  awarenessButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const mode = button.dataset.awareness;
+      const next = awarenessContent[mode];
+
+      awarenessButtons.forEach((item) => item.classList.remove("active"));
+      button.classList.add("active");
+
+      document.getElementById("awarenessTag").textContent = next.tag;
+      document.getElementById("awarenessTitle").textContent = next.title;
+      document.getElementById("awarenessCopy").textContent = next.copy;
+    });
+  });
+}
