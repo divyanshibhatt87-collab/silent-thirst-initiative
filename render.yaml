@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: silent-thirst-initiative
+    runtime: python
+    plan: free
+    buildCommand: python -m compileall .
+    startCommand: python app.py
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: PYTHONDONTWRITEBYTECODE
+        value: "1"

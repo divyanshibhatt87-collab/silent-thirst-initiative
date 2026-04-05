@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulation | The Silent Thirst</title>
+  <meta name="description" content="Interactive visual simulation showing how data centers use water for cooling and operations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="simulation">
+  <div class="page-shell">
+    <header class="page-hero">
+      <nav class="topbar">
+        <a class="brand" href="index.html"><span class="brand-mark"></span><span class="brand-text">The Silent Thirst Initiative</span></a>
+        <div class="nav-links">
+          <a data-nav="home" href="index.html">Home</a>
+          <a data-nav="research" href="research.html">Research</a>
+          <a data-nav="simulation" href="simulation.html">Simulation</a>
+          <a data-nav="solutions" href="solutions.html">Solutions</a>
+          <a data-nav="community" href="community.html">Community</a>
+          <a data-nav="connect" href="connect.html">Connect</a>
+        </div>
+      </nav>
+      <div class="page-hero-copy">
+        <p class="eyebrow">Simulation</p>
+        <h1 class="page-title">Watch the hidden water journey behind a growing AI data center.</h1>
+        <p class="lead">
+          This interactive explainer turns abstract numbers into a visual story:
+          more compute means more heat, more cooling, and in many systems more
+          water pulled into an invisible industrial loop.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Interactive explainer</p>
+          <h2>Move the sliders to see how heavier AI demand can intensify water use.</h2>
+        </div>
+
+        <div class="simulation-layout">
+          <div class="simulation-controls">
+            <label class="control-group">
+              <span>AI demand intensity</span>
+              <input id="demandRange" type="range" min="1" max="10" value="4">
+              <strong id="demandValue">4 / 10</strong>
+            </label>
+            <label class="control-group">
+              <span>Outdoor heat pressure</span>
+              <input id="heatRange" type="range" min="1" max="10" value="5">
+              <strong id="heatValue">5 / 10</strong>
+            </label>
+            <label class="control-group">
+              <span>Cooling design</span>
+              <select id="coolingSelect">
+                <option value="evaporative">Evaporative cooling tower</option>
+                <option value="hybrid">Hybrid / adiabatic system</option>
+                <option value="closed">Closed-loop liquid cooling</option>
+              </select>
+            </label>
+
+            <div class="simulation-legend">
+              <div><span class="legend-dot water"></span> Water entering the system</div>
+              <div><span class="legend-dot heat"></span> Heat created by computation</div>
+              <div><span class="legend-dot vapor"></span> Water lost or pushed out as vapor</div>
+            </div>
+          </div>
+
+          <div class="simulation-stage">
+            <div class="sim-pipeline">
+              <div class="sim-node source">
+                <h3>Water source</h3>
+                <p id="waterSourceLabel">Freshwater draw increases.</p>
+                <div class="bar-shell"><div id="waterBar" class="bar-fill water-fill"></div></div>
+              </div>
+
+              <div class="flow-arrow">→</div>
+
+              <div class="sim-node servers">
+                <h3>Server hall</h3>
+                <p id="serverLabel">Compute load generates moderate heat.</p>
+                <div class="chip-grid" id="chipGrid">
+                  <span class="chip active"></span>
+                  <span class="chip active"></span>
+                  <span class="chip active"></span>
+                  <span class="chip active"></span>
+                  <span class="chip"></span>
+                  <span class="chip"></span>
+                  <span class="chip"></span>
+                  <span class="chip"></span>
+                </div>
+              </div>
+
+              <div class="flow-arrow">→</div>
+
+              <div class="sim-node cooling">
+                <h3>Cooling system</h3>
+                <p id="coolingLabel">Cooling demand is steady.</p>
+                <div class="tower-visual">
+                  <div id="towerGlow" class="tower-core"></div>
+                  <div id="vaporCloud" class="vapor-cloud"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="sim-metrics">
+              <article class="metric-card">
+                <p class="response-label">Illustrative water draw</p>
+                <h3 id="waterMetric">2,000 liters / hour</h3>
+                <p id="waterMetricCopy">Equivalent to roughly 10 home bathtubs every hour.</p>
+              </article>
+              <article class="metric-card">
+                <p class="response-label">Illustrative heat burden</p>
+                <h3 id="heatMetric">Moderate</h3>
+                <p id="heatMetricCopy">More chips working harder means more heat that has to leave the building.</p>
+              </article>
+              <article class="metric-card">
+                <p class="response-label">Public takeaway</p>
+                <h3 id="awarenessMetric">The invisible cost grows quietly.</h3>
+                <p id="awarenessMetricCopy">People may only see faster AI tools, while local water systems absorb the strain.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading narrow">
+          <p class="eyebrow">Make the numbers feel human</p>
+          <h2>These comparisons help a public audience grasp scale faster.</h2>
+        </div>
+        <div class="fact-grid">
+          <article class="fact-card">
+            <span class="fact-number">01</span>
+            <h3>A chatbot session can still have a water trace</h3>
+            <p>Even a digital interaction can map back to cooling systems, electricity, and infrastructure that physically consumes resources.</p>
+          </article>
+          <article class="fact-card">
+            <span class="fact-number">02</span>
+            <h3>Heat is the bridge between AI and water</h3>
+            <p>People understand that computers get hot. This page shows how managing that heat can turn into water demand.</p>
+          </article>
+          <article class="fact-card">
+            <span class="fact-number">03</span>
+            <h3>Public awareness can pressure better design</h3>
+            <p>Once the loop is visible, people can ask better questions about siting, cooling choices, water sourcing, and transparency.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>The simulation is designed to make invisible infrastructure understandable to the public.</p>
+      <a class="text-link" href="connect.html">Help spread awareness</a>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
