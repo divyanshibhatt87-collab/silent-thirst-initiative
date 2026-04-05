@@ -23,6 +23,7 @@ ALLOWED_FILES = {
     "/styles.css": "styles.css",
     "/script.js": "script.js",
 }
+STATIC_PREFIXES = ("images/",)
 
 
 def load_dotenv() -> None:
@@ -104,6 +105,12 @@ class PassionProjectHandler(BaseHTTPRequestHandler):
 
         file_name = ALLOWED_FILES.get(parsed.path)
         if not file_name:
+            static_path = parsed.path.lstrip("/")
+            if static_path.startswith(STATIC_PREFIXES):
+                candidate = (ROOT / static_path).resolve()
+                if ROOT.resolve() in candidate.parents and candidate.is_file():
+                    self.serve_file(candidate)
+                    return
             self.respond_json(404, {"error": "Not found"})
             return
 

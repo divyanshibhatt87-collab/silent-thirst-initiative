@@ -346,6 +346,16 @@ p {
   max-width: 760px;
 }
 
+.page-hero-copy-wide {
+  max-width: 1100px;
+}
+
+.page-hero-copy-wide .page-title {
+  max-width: 18ch;
+  font-size: clamp(3.2rem, 5.2vw, 5.6rem);
+  line-height: 0.95;
+}
+
 .section-heading {
   display: flex;
   justify-content: space-between;
