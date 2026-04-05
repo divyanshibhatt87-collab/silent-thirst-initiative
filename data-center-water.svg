@@ -1,0 +1,37 @@
+<svg width="800" height="520" viewBox="0 0 800 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="520" rx="36" fill="url(#bg)"/>
+  <circle cx="122" cy="92" r="72" fill="#F29C7B" fill-opacity="0.22"/>
+  <circle cx="680" cy="110" r="92" fill="#7AD3E0" fill-opacity="0.18"/>
+  <rect x="96" y="214" width="238" height="180" rx="28" fill="#143B5D"/>
+  <rect x="126" y="246" width="178" height="18" rx="9" fill="#DBEEF4" fill-opacity="0.84"/>
+  <rect x="126" y="281" width="178" height="18" rx="9" fill="#DBEEF4" fill-opacity="0.62"/>
+  <rect x="126" y="316" width="136" height="18" rx="9" fill="#DBEEF4" fill-opacity="0.44"/>
+  <rect x="344" y="282" width="192" height="18" rx="9" fill="url(#pipe)"/>
+  <path d="M566 181C566 132.399 605.399 93 654 93H671C719.601 93 759 132.399 759 181V212H566V181Z" fill="#DBEEF4"/>
+  <rect x="594" y="212" width="137" height="178" rx="40" fill="url(#tower)"/>
+  <path d="M665.5 155C679.028 178.433 685.34 201.913 679.536 207.446C673.732 212.979 658.01 198.47 644.482 175.037C630.955 151.603 624.643 128.123 630.447 122.59C636.251 117.057 651.972 131.566 665.5 155Z" fill="url(#drop)"/>
+  <path d="M537 332C537 261.86 593.86 205 664 205H718V376H537V332Z" fill="#205781" fill-opacity="0.16"/>
+  <path d="M92 414H708" stroke="#143B5D" stroke-opacity="0.16" stroke-width="12" stroke-linecap="round"/>
+  <text x="116" y="198" fill="#143B5D" font-family="Arial, sans-serif" font-size="28" font-weight="700">AI server hall</text>
+  <text x="575" y="76" fill="#143B5D" font-family="Arial, sans-serif" font-size="28" font-weight="700">Cooling tower</text>
+  <text x="356" y="268" fill="#143B5D" font-family="Arial, sans-serif" font-size="24" font-weight="700">Water in</text>
+  <text x="586" y="438" fill="#143B5D" font-family="Arial, sans-serif" font-size="24" font-weight="700">Vapor out</text>
+  <defs>
+    <linearGradient id="bg" x1="72" y1="38" x2="735" y2="505" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF8EE"/>
+      <stop offset="1" stop-color="#E8F4F4"/>
+    </linearGradient>
+    <linearGradient id="pipe" x1="344" y1="291" x2="536" y2="291" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#45B8D2"/>
+      <stop offset="1" stop-color="#127475"/>
+    </linearGradient>
+    <linearGradient id="tower" x1="662.5" y1="212" x2="662.5" y2="390" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#45B8D2"/>
+      <stop offset="1" stop-color="#143B5D"/>
+    </linearGradient>
+    <linearGradient id="drop" x1="647" y1="123" x2="666" y2="208" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7AD3E0"/>
+      <stop offset="1" stop-color="#1D70A2"/>
+    </linearGradient>
+  </defs>
+</svg>

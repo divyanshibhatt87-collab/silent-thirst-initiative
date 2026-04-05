@@ -1,0 +1,23 @@
+<svg width="760" height="460" viewBox="0 0 760 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="760" height="460" rx="34" fill="url(#bg)"/>
+  <rect x="70" y="88" width="232" height="258" rx="28" fill="#143B5D"/>
+  <path d="M181 129C202.691 166.576 212.813 204.245 203.504 213.119C194.194 221.993 168.977 198.713 147.286 161.137C125.594 123.56 115.472 85.8915 124.782 77.0178C134.091 68.1442 159.309 91.4236 181 129Z" fill="url(#drop)"/>
+  <text x="95" y="382" fill="#F8FBFB" font-family="Arial, sans-serif" font-size="28" font-weight="700">AI has a</text>
+  <text x="95" y="416" fill="#F8FBFB" font-family="Arial, sans-serif" font-size="28" font-weight="700">water story.</text>
+  <circle cx="522" cy="145" r="84" fill="#7AD3E0" fill-opacity="0.18"/>
+  <path d="M440 247C440 190.114 486.114 144 543 144H610C666.886 144 713 190.114 713 247V273H440V247Z" fill="#DBEEF4"/>
+  <rect x="480" y="273" width="193" height="108" rx="30" fill="#127475" fill-opacity="0.24"/>
+  <text x="356" y="112" fill="#143B5D" font-family="Arial, sans-serif" font-size="30" font-weight="700">Public awareness</text>
+  <text x="356" y="152" fill="#143B5D" font-family="Arial, sans-serif" font-size="30" font-weight="700">turns hidden infrastructure</text>
+  <text x="356" y="192" fill="#143B5D" font-family="Arial, sans-serif" font-size="30" font-weight="700">into a shared issue.</text>
+  <defs>
+    <linearGradient id="bg" x1="36" y1="27" x2="710" y2="423" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF7ED"/>
+      <stop offset="1" stop-color="#EAF7F7"/>
+    </linearGradient>
+    <linearGradient id="drop" x1="126" y1="79" x2="179" y2="214" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7AD3E0"/>
+      <stop offset="1" stop-color="#1D70A2"/>
+    </linearGradient>
+  </defs>
+</svg>
